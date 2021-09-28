@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Awesome todo list</title>
+  </head>
+  <body>
+    <div id="todo-list-container">
+        <h1>Awesome Todo List</h1>
+      <div class="todos__list">
+        <ul id="todos">
+        </ul>
+      <div class="button-container">
+        <input type="text" name="todo" id="todo-create" />
+        <div class="button-container__buttons">
+            <span id="create" class="button create" onclick="createTodo()">Créer</span>
+            <span id="reset" class="button reset" onclick="reset()">Reset</span>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

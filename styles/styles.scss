@@ -1,0 +1,149 @@
+$purple: #810699;
+$purple-hover: #d729fa;
+$blue: #035880;
+$blue-hover: #1faaeb;
+$create: #2dceeb;
+$create-hover: #7de7fa;
+$reset: #c905cf;
+$reset-hover: #fa5fff;
+$transition-time: 200ms;
+$validated: rgb(20, 187, 20);
+$validated-hover: rgb(105, 224, 105);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 0.9rem;
+}
+
+#no-todos {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #035880;
+}
+
+#todo-list-container {
+  background: linear-gradient(#810699, #035880);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: $blue-hover;
+  margin: 10px;
+  font-size: 3rem;
+}
+
+.todos__list {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+ul {
+  padding-top: 5px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  list-style: none;
+  width: 80%;
+  height: 50px;
+  background-color: $purple;
+  transition: background-color ease-in-out $transition-time;
+  &:hover {
+    background-color: $purple-hover;
+  }
+  &:nth-child(odd) {
+    background-color: $blue;
+    &:hover {
+      background-color: $blue-hover;
+    }
+  }
+}
+
+li.validated {
+  background-color: $validated;
+  text-decoration: line-through;
+  &:hover {
+    background-color: $validated-hover;
+  }
+}
+
+.close {
+  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.5rem;
+  cursor: pointer;
+  &:hover {
+    color: gray;
+  }
+}
+
+.button-container {
+  margin: 10px;
+  text-align: center;
+  div {
+    margin: 5px;
+  }
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 15px 10px 15px;
+  transition: background-color $transition-time;
+  &:hover {
+    box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.2);
+  }
+  &.reset {
+    background-color: $reset;
+    &:hover {
+      background-color: $reset-hover;
+    }
+  }
+  &.create {
+    background-color: $create;
+    &:hover {
+      background-color: $create-hover;
+    }
+  }
+}
+
+input {
+  color: #035880;
+  width: 85%;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  &:focus {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 3px 6px 1px rgba(0, 0, 0, 0.1);
+  }
+}
